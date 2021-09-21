@@ -21,6 +21,11 @@ header, main, footer{
   font-family: 'Roboto', sans-serif;
 }
 
+::selection{
+  background: rgb(32, 56, 33);
+  color: white;
+}
+
 /* TOPBAR */
 .topbar{
   display: flex;
@@ -57,3 +62,65 @@ header, main, footer{
 .topbar-active{
   color: black;
 }
+
+/* MAIN HERO BANNER */
+
+.hero-banner{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.hero-title{
+  margin-bottom: 10px;
+  font-size: 72px;
+  color: rgba(33, 33, 33, 0.3);
+}
+
+.hero-span{
+  color: #222;
+}
+
+.hero-para-1{
+  font-size: 80px;
+}
+
+.hero-para-2{
+  font-size: 32px;
+  color: rgba(33, 33, 33, 0.3);
+}
+
+.hero-buttons{
+  display: flex;
+  margin-top: 70px;
+}
+
+.hero-buttons > a{
+  padding: 20px 20px;
+  border-radius: 6px;
+  background-color: rgb(32, 56, 33);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0 150px;
+  transition: all 0.5s ease-in-out;
+}
+
+.hero-buttons > a:hover{
+  color: black;
+  background-color: white;
+}
+
+.hero-animation{
+  position: relative;
+  width: 100%;
+}
+
+.hero-animation > img{
+  position: absolute;
+  top: 0;
+  height: 200px;
+  width: auto;
+}
+
