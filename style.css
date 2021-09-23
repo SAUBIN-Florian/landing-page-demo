@@ -118,9 +118,27 @@ header, main, footer{
 }
 
 .hero-animation > img{
-  position: absolute;
-  top: 0;
   height: 200px;
   width: auto;
 }
 
+.hero-img-1{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hero-img-2{
+  position: absolute;
+  top: 0;
+  left: 35%;
+}
+
+.hero-img-3{
+  position: absolute;
+  top: 0px;
+  right: 0;
+}
+
+
+/* MAIN "ABOUT" SECTION */
