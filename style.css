@@ -87,7 +87,7 @@ header, main, footer{
 }
 
 .hero-para-2{
-  font-size: 32px;
+  font-size: 24px;
   color: rgba(33, 33, 33, 0.3);
 }
 
@@ -114,7 +114,9 @@ header, main, footer{
 
 .hero-animation{
   position: relative;
+  top: -60px;
   width: 100%;
+  z-index: -10;
 }
 
 .hero-animation > img{
@@ -131,13 +133,19 @@ header, main, footer{
 .hero-img-2{
   position: absolute;
   top: 0;
-  left: 35%;
+  right: 24%;
 }
 
 .hero-img-3{
   position: absolute;
   top: 0px;
   right: 0;
+}
+
+.hero-img-4{
+  position: absolute;
+  top: 0px;
+  left: 24%;
 }
 
 
