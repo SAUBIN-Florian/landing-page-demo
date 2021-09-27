@@ -21,6 +21,10 @@ header, main, footer{
   font-family: 'Roboto', sans-serif;
 }
 
+.main{
+  margin-top: 80px;
+}
+
 ::selection{
   background: rgb(32, 56, 33);
   color: white;
@@ -28,6 +32,8 @@ header, main, footer{
 
 /* TOPBAR */
 .topbar{
+  position: fixed;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
