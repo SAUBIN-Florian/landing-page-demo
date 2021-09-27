@@ -148,5 +148,27 @@ header, main, footer{
   left: 24%;
 }
 
-
 /* MAIN "ABOUT" SECTION */
+
+.about-us{
+  display: flex;
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+
+.about-img{
+  width: 50%;
+  height: auto;
+  margin-left: 80px;
+}
+
+.about-para{
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  padding: 10px 50px;
+}
+
+.about-para > p{
+  line-height: 40px;
+}
