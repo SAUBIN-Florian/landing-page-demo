@@ -109,7 +109,7 @@ header, main, footer{
 
 .hero-buttons > a:hover{
   color: black;
-  background-color: white;
+  background-color: rgba(32, 56, 33, 0);
 }
 
 .hero-animation{
