@@ -1,5 +1,6 @@
 /* POLICY */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
 /* RESET && GLOBAL */
 *{
@@ -15,6 +16,10 @@ a{
 
 li{
   list-style: none;
+}
+
+body{
+  overflow-x: hidden;
 }
 
 header, main, footer{
@@ -41,6 +46,7 @@ header, main, footer{
   height: 80px;
   color: white;
   transition: all 0.6s ease-in-out;
+  z-index: 1000;
 }
 
 .topbar:hover{
@@ -48,6 +54,7 @@ header, main, footer{
 }
 
 .topbar > h1{
+  font-family: 'Archivo Black', sans-serif;
   margin-left: 40px;
 }
 
@@ -95,7 +102,8 @@ header, main, footer{
 }
 
 .hero-para-1{
-  font-size: 80px;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 139px;
 }
 
 .hero-para-2{
@@ -126,13 +134,13 @@ header, main, footer{
 
 .hero-animation{
   position: relative;
-  top: -60px;
+  top: -30px;
   width: 100%;
   z-index: -10;
 }
 
 .hero-animation > img{
-  height: 200px;
+  height: 210px;
   width: auto;
 }
 
@@ -140,24 +148,75 @@ header, main, footer{
   position: absolute;
   top: 0;
   left: 0;
+  animation: 400s linear 0s infinite slide1;
 }
 
 .hero-img-2{
   position: absolute;
   top: 0;
   right: 24%;
+  animation: 400s linear 0s infinite slide2;
 }
 
 .hero-img-3{
   position: absolute;
   top: 0px;
   right: 0;
+  animation: 400s linear 0s infinite slide3;
 }
 
 .hero-img-4{
   position: absolute;
   top: 0px;
   left: 24%;
+  animation: 400s linear 0s infinite slide4;
+}
+
+.hero-img-5{
+  position: absolute;
+  top: 0px;
+  left: 40%;
+  animation: 400s linear 0s infinite slide5;
+}
+
+/* ANIMATION CLOUD */
+
+@keyframes slide1{
+  0%{transform: translateX(0)}
+  50%{transform: translateX(calc(100vw - 50px))}
+  100%{transform: translateX(0)}
+}
+
+@keyframes slide2{
+  0%{transform: translateX(0)}
+  25%{transform: translateX(calc(50vw - 50px))}
+  50%{transform: translateX(-800px)}
+  75%{transform: translateX(-200px)}
+  100%{transform: translateX(0px)}
+}
+
+@keyframes slide3{
+  0%{transform: translateX(0)}
+  25%{transform: translateX(-1150px)}
+  50%{transform: translateX(-400px)}
+  75%{transform: translateX(100px)}
+  100%{transform: translateX(0)}
+}
+
+@keyframes slide4{
+  0%{transform: translateX(0)}
+  25%{transform: translateX(900px)}
+  50%{transform: translateX(-600px)}
+  75%{transform: translateX(-300px)}
+  100%{transform: translateX(0)}
+}
+
+@keyframes slide5{
+  0%{transform: translateX(0px)}
+  25%{transform: translateX(-600px)}
+  50%{transform: translateX(0)}
+  75%{transform: translateX(500px)}
+  100%{transform: translateX(0)}
 }
 
 /* MAIN "ABOUT" SECTION */
@@ -205,9 +264,18 @@ header, main, footer{
 }
 
 .card > h3{
+  font-family: 'Archivo Black', sans-serif;
   padding: 2px 0;
-  margin: 16px 0;
-  border-bottom: 0.5px solid black;
+  color: rgb(32, 56, 33);
   text-align: left;
+  transition: all 0.8s ease-in-out;
+}
 
+.card > h3:hover{
+  transform: translateX(50%);
+}
+
+.card > p{
+  border-top: 1px solid rgb(32, 56, 33);
+  padding: 20px 0;
 }
