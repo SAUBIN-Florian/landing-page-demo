@@ -42,7 +42,7 @@ header, main, footer{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   height: 80px;
   color: white;
   transition: all 0.6s ease-in-out;
@@ -230,7 +230,7 @@ header, main, footer{
 
 .about-img{
   width: 50%;
-  height: auto;
+  height: 50%;
   margin-left: 80px;
   box-shadow: 4px 4px 3px rgba(33, 33, 33, 0.6);
   border-radius: 4px;
@@ -381,7 +381,7 @@ header, main, footer{
 
 .footer-section-1{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   width: 100vw;
   height: 100vh;
