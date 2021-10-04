@@ -395,15 +395,16 @@ header, main, footer{
 
 .footer-1-content h2{
   font-family: 'Archivo Black', sans-serif;
-  font-size: 48px;
+  font-size: 52px;
 }
 
 .footer-1-content h3{
-  margin: 30px 0;
+  margin: 50px 0;
   font-size: 20px;
   font-weight: lighter;
 }
 
 .footer-1-content p{
+  margin-top: -20px;
   font-size: 16px;
 }

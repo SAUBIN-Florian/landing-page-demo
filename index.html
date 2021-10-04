@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="app.js" defer></script>
+  <!-- MAP API -->
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
   <title>Landing Page Demo</title>
 </head>
 <body>
@@ -20,7 +23,7 @@
         <p>•</p>
         <li class="topbar-item"><a href="#prices">PRIX</a></li>
         <p>•</p>
-        <li class="topbar-item"><a href="#">LOCALISATION</a></li>
+        <li class="topbar-item"><a href="#footer">LOCALISATION</a></li>
       </ul>
     </div>
   </header>
@@ -36,7 +39,7 @@
       <h3 class="hero-para-2">Le prestataire de vos soirées</h3>
       <div class="hero-buttons">
         <a href="#prices" class="price">NOS TARIFS</a>
-        <a href="#" class="localisation">NOUS TROUVER</a>
+        <a href="#footer" class="localisation">NOUS TROUVER</a>
       </div>
       <div class="hero-animation">
         <img src="./images/cloud1-copy.png" class="hero-img-1" alt="cloud">
@@ -159,14 +162,14 @@
       </div>
     </div>
   </main>
-  <footer class="footer">
+  <footer id="footer">
     <div class="footer-section-1">
       <div class="footer-1-content">
         <h2>P A & E</h2>
         <h3>Adresse</h3>
         <p>21 Rue de la musique LYON</p>
       </div>
-      <div class="map"></div>
+      <div id='map' style='width: 45%; height: 500px;'></div>
     </div>
     <div class="footer-section-2"></div>
   </footer>
