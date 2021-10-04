@@ -310,3 +310,100 @@ header, main, footer{
 }
 
 /* PRICES SECTION */
+
+#prices{
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  padding-top: 10px;
+}
+
+.prices-title{
+  margin-top: 70px;
+  font-size: 28px;
+  color: rgb(32, 56, 33);
+}
+
+.prices-chart{
+  color: rgba(33, 33, 33, 0.5);
+  font-size: 14px;
+}
+
+.group-prices{
+  display: flex;
+  flex-flow: column;
+  
+}
+
+.group-prices > h5{
+  width: 100px;
+  padding: 12px 0;
+  margin: 40px 0;
+  color: white;
+  font-size: 16px;
+  font-weight: lighter;
+  text-align: center;
+  background-color: rgb(32, 56, 33);
+}
+
+.prices-content{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  border-bottom: dotted 2px #dddddd;
+}
+
+.prices-content > h6{
+  position: absolute;
+  top: -0.7em;
+  left: 0;
+  font-size: 15px;
+  background-color: #fff;
+  padding: 0 10px 0 0;
+}
+
+.prices-content > p{
+  position: absolute;
+  top: -0.7em;
+  right: 0;
+  background-color: #fff;
+  padding: 0 0 0 10px;
+}
+
+.prices-content span{
+  font-size: 13px;
+  font-weight: lighter;
+  color: rgba(33, 33, 33, 0.5);
+}
+
+/* FOOTER SECTION */
+
+.footer-section-1{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #262626;
+}
+
+.footer-1-content{
+  color: #666666;
+  text-align: center;
+}
+
+.footer-1-content h2{
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 48px;
+}
+
+.footer-1-content h3{
+  margin: 30px 0;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.footer-1-content p{
+  font-size: 16px;
+}
