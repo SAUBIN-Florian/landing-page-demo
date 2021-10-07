@@ -94,6 +94,7 @@ header, main, footer{
 .hero-title{
   margin-bottom: 10px;
   font-size: 72px;
+  font-weight: bold;
   color: rgba(33, 33, 33, 0.3);
 }
 
@@ -397,12 +398,14 @@ header, main, footer{
 .footer-1-content h2{
   font-family: 'Archivo Black', sans-serif;
   font-size: 52px;
+  text-shadow: 1px 0 5px rgba(0, 0, 0, 0.6);
 }
 
 .footer-1-content h3{
   margin: 50px 0;
   font-size: 20px;
   font-weight: lighter;
+  text-shadow: 1px 0 2px rgba(0, 0, 0, 0.6);
 }
 
 .footer-1-content p{
@@ -450,4 +453,5 @@ header, main, footer{
   font-weight: lighter;
   font-size: 14px;
   color: #666666;
+  text-shadow: 1px 0 2px rgba(0, 0, 0, 0.6);
 }
