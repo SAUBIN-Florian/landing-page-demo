@@ -13,11 +13,11 @@
   <title>Landing Page Demo</title>
 </head>
 <body>
-  <header class="header">
+  <header class="header" id="top">
     <div class="topbar">
       <h1 class="logo"><a href="/">P A & E</a></h1>
       <ul class="topbar-list">
-        <li class="topbar-item"><a href="#">HOME</a></li>
+        <li class="topbar-item"><a href="#top">HOME</a></li>
         <p>•</p>
         <li class="topbar-item topbar-active"><a href="#about-us">QUI SOMMES-NOUS</a></li>
         <p>•</p>
@@ -28,20 +28,20 @@
     </div>
   </header>
   <main class="main">
-    <div class="hero-banner reveal">
-      <h3 class="hero-para-1">P A & E</h3>
-      <div class="hero-title">
+    <div class="hero-banner">
+      <h3 class="hero-para-1 reveal-1">P A & E</h3>
+      <div class="hero-title reveal-2">
         <span class="hero-span">P</span>RO 
         <span class="hero-span">A</span>NIMATION 
         <span class="hero-span">&</span>
         <span class="hero-span">E</span>VENEMENTIEL.
       </div>
-      <h3 class="hero-para-2">Le prestataire de vos soirées</h3>
-      <div class="hero-buttons">
+      <h3 class="hero-para-2 reveal-3">Le prestataire de vos soirées</h3>
+      <div class="hero-buttons reveal-4">
         <a href="#prices" class="price">NOS TARIFS</a>
         <a href="#footer" class="localisation">NOUS TROUVER</a>
       </div>
-      <div class="hero-animation">
+      <div class="hero-animation reveal-3">
         <img src="./images/cloud1-copy.png" class="hero-img-1" alt="cloud">
         <img src="./images/cloud2-copy.png" class="hero-img-2" alt="cloud">
         <img src="./images/cloud1-copy.png" class="hero-img-3" alt="cloud">
@@ -49,7 +49,7 @@
         <img src="./images/cloud2-copy.png" class="hero-img-5" alt="cloud">
       </div>
     </div>
-    <div id="about-us" class="about-us reveal">
+    <div id="about-us" class="about-us reveal-1">
       <img class="about-img" src="https://images.pexels.com/photos/2470088/pexels-photo-2470088.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="club">
       <div class="about-para">
         <p><span style="font-weight: bold;">P A & E</span> c’est votre prestataire pour votre événement d’entreprise, 
@@ -66,7 +66,7 @@
       </div>
     </div>
     <div class="cards">
-      <div class="card reveal">
+      <div class="card reveal-1">
         <h3>Animation Musicales</h3>
         <p>
           Pas de soirée sans musique et, surtout pas de bonnes soirées sans un bon DJ. 
@@ -74,7 +74,7 @@
           Open forma ou spécialisés nos Dj’s sauront parfaitement s’adapter à vos demandes.
         </p>
       </div>
-      <div class="card reveal">
+      <div class="card reveal-1">
         <h3>Animation Micro</h3>
         <p>
           Vous recherchez une animation musicale de qualité originale, 
@@ -85,7 +85,7 @@
           Avec un seul objectif, marquer les esprits.
         </p>
       </div>
-      <div class="card reveal">
+      <div class="card reveal-1">
         <h3>Concept d'animation</h3>
         <p><span style="font-weight: bold;">P A & E</span> vous propose un service de location de matériel en ligne , 
           avec livraison ou en retrait magasin. Location de matériel de sonorisation,  
@@ -95,15 +95,15 @@
         </p>
       </div>
     </div>
-    <div class="wedding-pic reveal">
+    <div class="wedding-pic reveal-1">
       <div class="wedding-quotes">
         <h2>Depuis 2007, P A & E c’est + de 2800 animations réalisées …</h2>
         <h4>Dj party, animation musicale d’événement, animation micro commerciale, speaker sportif...</h4>
       </div>
     </div>
     <div id="prices">
-      <h2 class="prices-title">TARIFS <span class="prices-chart">(liste non exhaustive, hors options)*</span></h2>
-      <div class="group-prices reveal">
+      <h2 class="prices-title reveal-1">TARIFS <span class="prices-chart">(liste non exhaustive, hors options)*</span></h2>
+      <div class="group-prices reveal-1">
         <h5>Mariage</h5>
         <div class="prices-content">
           <h6>Réception <span>à partir de 100 personnes</span></h6>
@@ -130,7 +130,7 @@
           <p><bold>€</bold>150</p>
         </div>
       </div>
-      <div class="group-prices reveal">
+      <div class="group-prices reveal-1">
         <h5>Karaoke</h5>
         <div class="prices-content">
           <h6>Vidéo: 1 écran + 1 vidéo-projecteur <span></span></h6>
@@ -145,7 +145,7 @@
           <p><bold>€</bold>50</p>
         </div>
       </div>
-      <div class="group-prices reveal">
+      <div class="group-prices reveal-1">
         <h5>Anniversaire</h5>
         <div class="prices-content">
           <h6>Machine à confettis <span></span></h6>
@@ -162,7 +162,7 @@
       </div>
     </div>
   </main>
-  <footer id="footer reveal">
+  <footer id="footer" class="reveal-1">
     <div class="footer-section-1">
       <div class="footer-1-content">
         <h2>P A & E</h2>
@@ -170,7 +170,7 @@
         <p>21 Rue de la musique LYON</p>
       </div>
       <div id='map' style='width: 40%; height: 70%;'></div>
-      <a class="footer-btn" href="#"><i class="fas fa-angle-double-up"></i></a>
+      <a class="footer-btn" href="#top"><i class="fas fa-angle-double-up"></i></a>
     </div>
     <div class="footer-section-2">
       <div class="footer-social">

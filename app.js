@@ -16,7 +16,7 @@ const handleIntersect = (entries, observer) => {
 }
 
 const observer = new IntersectionObserver(handleIntersect, options);
-document.querySelectorAll(".reveal").forEach((r)=>{
+document.querySelectorAll('[class*="reveal-"]').forEach((r)=>{
   observer.observe(r);
 })
 
