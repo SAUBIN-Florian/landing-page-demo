@@ -455,3 +455,16 @@ header, main, footer{
   color: #666666;
   text-shadow: 1px 0 2px rgba(0, 0, 0, 0.6);
 }
+
+/* ANIMATION JS */
+
+.reveal{
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.reveal-visible{
+  opacity: 1;
+  transform: translateY(0);
+  transition: 0.6s cubic-bezier(.37,.01,.73,1);
+}
