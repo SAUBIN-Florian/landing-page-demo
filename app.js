@@ -20,7 +20,7 @@ window.addEventListener("scroll", () => {
   }
 })
 
-// OPACITY ANIMATION
+// OPACITY SCROLL ANIMATION
 
 const ratio = 0.1;
 const options = {
@@ -57,7 +57,7 @@ const smoothScroll = (target, duration) => {
     let timeElapsed = currentTime - startTime;
     let run = ease(timeElapsed, startPosition, distance, duration);
     window.scrollTo(0, run);
-    if(timeElapsed > duration) requestAnimationFrame(animation);
+    if(timeElapsed < duration) requestAnimationFrame(animation);
   }
 
   // spicyyoghurt.com pour cette fonction de fondu d'animation
@@ -71,10 +71,10 @@ const smoothScroll = (target, duration) => {
   requestAnimationFrame(animation);
 }
 
-const homeScroll = document.querySelector(".scroll-about-us");
+const homeScroll = document.querySelector(".scroll-home");
 const aboutScroll = document.querySelector(".scroll-about-us");
-const pricesScroll = document.querySelector(".scroll-about-us");
-const footerScroll = document.querySelector(".scroll-about-us");
+const pricesScroll = document.querySelector(".scroll-prices");
+const footerScroll = document.querySelector(".scroll-footer");
 const topScroll = document.querySelector(".footer-btn");
 
 homeScroll.addEventListener("click", smoothScroll("#top", 1000));
