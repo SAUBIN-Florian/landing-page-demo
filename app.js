@@ -1,4 +1,27 @@
+// TOPBAR SWAP COLOR
+
+const topbar = document.querySelector(".topbar");
+const topbarItems = document.querySelectorAll(".topbar-item");
+const matchPosition = document.querySelector(".about-us");
+
+window.addEventListener("scroll", () => {
+  if(matchPosition.getBoundingClientRect().top <= 50){
+    topbar.classList.remove("topbar-state-1");
+    topbar.classList.add("topbar-state-2");
+    topbarItems.forEach((item) => {
+      item.classList.add("active")
+    })
+  }else if(matchPosition.getBoundingClientRect().top >= 50){
+    topbar.classList.add("topbar-state-1");
+    topbar.classList.remove("topbar-state-2");
+    topbarItems.forEach((item) => {
+      item.classList.remove("active")
+    })
+  }
+})
+
 // OPACITY ANIMATION
+
 const ratio = 0.1;
 const options = {
   root: null,
@@ -19,6 +42,46 @@ const observer = new IntersectionObserver(handleIntersect, options);
 document.querySelectorAll('[class*="reveal-"]').forEach((r)=>{
   observer.observe(r);
 })
+
+// SMOOTH SCROLL ANIMATION
+
+const smoothScroll = (target, duration) => {
+  let targetPoint = document.querySelector(target);
+  let targetPosition = targetPoint.getBoundingClientRect().top;
+  let startPosition = window.pageYOffset;
+  let distance = targetPosition - startPosition;
+  let startTime = null;
+
+  const animation = (currentTime) => {
+    if(startTime === null) startTime = currentTime;
+    let timeElapsed = currentTime - startTime;
+    let run = ease(timeElapsed, startPosition, distance, duration);
+    window.scrollTo(0, run);
+    if(timeElapsed > duration) requestAnimationFrame(animation);
+  }
+
+  // spicyyoghurt.com pour cette fonction de fondu d'animation
+  const ease = (t, b, c, d) => {
+    t /= d / 2;
+    if (t < 1) return  c / 2 * t * t + b;
+    t--;
+    return -c / 2 * (t * (t - 2) -1) + b;
+  }
+
+  requestAnimationFrame(animation);
+}
+
+const homeScroll = document.querySelector(".scroll-about-us");
+const aboutScroll = document.querySelector(".scroll-about-us");
+const pricesScroll = document.querySelector(".scroll-about-us");
+const footerScroll = document.querySelector(".scroll-about-us");
+const topScroll = document.querySelector(".footer-btn");
+
+homeScroll.addEventListener("click", smoothScroll("#top", 1000));
+aboutScroll.addEventListener("click", smoothScroll("#about-us", 1000));
+pricesScroll.addEventListener("click", smoothScroll("#prices", 1000));
+footerScroll.addEventListener("click", smoothScroll("#footer", 1000));
+topScroll.addEventListener("click", smoothScroll("#top", 1000));
 
 // MAPBOX API
 

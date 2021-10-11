@@ -44,12 +44,16 @@ header, main, footer{
   align-items: center;
   width: 100vw;
   height: 80px;
-  color: white;
-  transition: all 0.6s ease-in-out;
+  transition: all 0.5s ease-in-out;
   z-index: 1000;
 }
 
-.topbar:hover{
+.topbar-state-1{
+  color: white;
+  transition: all 0.5s ease-in-out;
+}
+
+.topbar-state-1:hover{
   background-color: rgba(33, 33, 33, 0.3);
 }
 
@@ -80,6 +84,17 @@ header, main, footer{
 
 .topbar-active{
   color: black;
+}
+
+.active{
+  color: black;
+}
+
+.topbar-state-2{
+  background-color: white;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  color: black;
+  transition: all 0.5s ease-in-out;
 }
 
 /* MAIN HERO BANNER */
