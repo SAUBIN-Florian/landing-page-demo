@@ -1,6 +1,7 @@
 // PREVENT ORIENTATION CHANGE ONPHONE DEVICE
 
-window.screen.orientation.lock('portrait');
+let lockedScreen = window.screen.orientation;
+lockedScreen.lock('portrait');
 
 // TOPBAR SWAP COLOR
 
