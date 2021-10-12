@@ -1,13 +1,13 @@
-// PREVENT ORIENTATION CHANGE ONPHONE DEVICE
+ // PREVENT ORIENTATION CHANGE ONPHONE DEVICE (workin'on)
 
-const lockedScreen = async () => {
-  try{
-    await window.screen.orientation.lock('portrait');
-  }catch(err){
-    console.log(err);
-  }
-}
-lockedScreen()
+// const lockedScreen = async () => {
+//   try{
+//     await window.screen.orientation.lock('portrait');
+//   }catch(err){
+//     console.log(err);
+//   }
+// }
+// lockedScreen()
 
 // TOPBAR SWAP COLOR
 
