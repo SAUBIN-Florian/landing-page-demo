@@ -1,7 +1,13 @@
 // PREVENT ORIENTATION CHANGE ONPHONE DEVICE
 
-let lockedScreen = window.screen.orientation;
-lockedScreen.lock('portrait');
+const lockedScreen = async () => {
+  try{
+    await window.screen.orientation.lock('portrait');
+  }catch(err){
+    console.log(err);
+  }
+}
+lockedScreen()
 
 // TOPBAR SWAP COLOR
 
