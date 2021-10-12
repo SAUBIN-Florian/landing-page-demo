@@ -1,3 +1,7 @@
+// PREVENT ORIENTATION CHANGE ONPHONE DEVICE
+
+window.screen.orientation.lock('portrait');
+
 // TOPBAR SWAP COLOR
 
 const topbar = document.querySelector(".topbar");
