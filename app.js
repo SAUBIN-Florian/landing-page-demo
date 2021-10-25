@@ -1,14 +1,3 @@
- // PREVENT ORIENTATION CHANGE ONPHONE DEVICE (workin'on)
-
-// const lockedScreen = async () => {
-//   try{
-//     await window.screen.orientation.lock('portrait');
-//   }catch(err){
-//     console.log(err);
-//   }
-// }
-// lockedScreen()
-
 // TOPBAR SWAP COLOR
 
 const topbar = document.querySelector(".topbar");
@@ -56,43 +45,30 @@ document.querySelectorAll('[class*="reveal-"]').forEach((r)=>{
 
 // SMOOTH SCROLL ANIMATION
 
-const smoothScroll = (target, duration) => {
-  let targetPoint = document.querySelector(target);
-  let targetPosition = targetPoint.getBoundingClientRect().top;
-  let startPosition = window.pageYOffset;
-  let distance = targetPosition - startPosition;
-  let startTime = null;
+// const scrollTo = (element) => {
+//   const target = document.querySelector("#" + element);
+//   console.log(target)
+//   window.scrollTo({
+//     top: target.getBoundingClientRect().top,
+//     behavior: 'smooth'
+//   })
+// }
 
-  const animation = (currentTime) => {
-    if(startTime === null) startTime = currentTime;
-    let timeElapsed = currentTime - startTime;
-    let run = ease(timeElapsed, startPosition, distance, duration);
-    window.scrollTo(0, run);
-    if(timeElapsed < duration) requestAnimationFrame(animation);
-  }
+// const homeBtn = document.querySelector(".scroll-home")
+// homeBtn.addEventListener("click", ()=>{ scrollTo("top") })
 
-  // spicyyoghurt.com pour cette fonction de fondu d'animation
-  const ease = (t, b, c, d) => {
-    t /= d / 2;
-    if (t < 1) return  c / 2 * t * t + b;
-    t--;
-    return -c / 2 * (t * (t - 2) -1) + b;
-  }
+// const aboutBtn = document.querySelector(".scroll-about-us")
+// aboutBtn.addEventListener("click", ()=>{ scrollTo("about-us") })
 
-  requestAnimationFrame(animation);
-}
+// const priceBtn = document.querySelector(".price")
+// priceBtn.addEventListener("click", ()=>{ scrollTo("prices") })
 
-const homeScroll = document.querySelector(".scroll-home");
-const aboutScroll = document.querySelector(".scroll-about-us");
-const pricesScroll = document.querySelector(".scroll-prices");
-const footerScroll = document.querySelector(".scroll-footer");
-const topScroll = document.querySelector(".footer-btn");
+// const footerBtn = document.querySelector(".localisation")
+// footerBtn.addEventListener("click", ()=>{ scrollTo("footer") })
 
-homeScroll.addEventListener("click", smoothScroll("#top", 1000));
-aboutScroll.addEventListener("click", smoothScroll("#about-us", 1000));
-pricesScroll.addEventListener("click", smoothScroll("#prices", 1000));
-footerScroll.addEventListener("click", smoothScroll("#footer", 1000));
-topScroll.addEventListener("click", smoothScroll("#top", 1000));
+// const topBtn = document.querySelector(".footer-btn")
+// topBtn.addEventListener("click", ()=>{ scrollTo("top") })
+
 
 // MAPBOX API
 
