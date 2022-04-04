@@ -4,18 +4,20 @@ const topbar = document.querySelector(".topbar");
 const topbarItems = document.querySelectorAll(".topbar-item");
 const matchPosition = document.querySelector(".about-us");
 
+console.log(topbarItems)
+
 window.addEventListener("scroll", () => {
   if(matchPosition.getBoundingClientRect().top <= 50){
     topbar.classList.remove("topbar-state-1");
     topbar.classList.add("topbar-state-2");
     topbarItems.forEach((item) => {
-      item.classList.add("active")
+      item.children[0].classList.add("active")
     })
-  }else if(matchPosition.getBoundingClientRect().top >= 50){
+  }else {
     topbar.classList.add("topbar-state-1");
     topbar.classList.remove("topbar-state-2");
     topbarItems.forEach((item) => {
-      item.classList.remove("active")
+      item.children[0].classList.remove("active")
     })
   }
 })
@@ -43,37 +45,10 @@ document.querySelectorAll('[class*="reveal-"]').forEach((r)=>{
   observer.observe(r);
 })
 
-// SMOOTH SCROLL ANIMATION
-
-// const scrollTo = (element) => {
-//   const target = document.querySelector("#" + element);
-//   console.log(target)
-//   window.scrollTo({
-//     top: target.getBoundingClientRect().top,
-//     behavior: 'smooth'
-//   })
-// }
-
-// const homeBtn = document.querySelector(".scroll-home")
-// homeBtn.addEventListener("click", ()=>{ scrollTo("top") })
-
-// const aboutBtn = document.querySelector(".scroll-about-us")
-// aboutBtn.addEventListener("click", ()=>{ scrollTo("about-us") })
-
-// const priceBtn = document.querySelector(".price")
-// priceBtn.addEventListener("click", ()=>{ scrollTo("prices") })
-
-// const footerBtn = document.querySelector(".localisation")
-// footerBtn.addEventListener("click", ()=>{ scrollTo("footer") })
-
-// const topBtn = document.querySelector(".footer-btn")
-// topBtn.addEventListener("click", ()=>{ scrollTo("top") })
-
-
 // MAPBOX API
 
 mapboxgl.accessToken = 'pk.eyJ1Ijoicy1mbG9yaWFuIiwiYSI6ImNrbGt3cjYxazBycG8ycm9iOWgzbXEyOGIifQ.XvkhPvp5NJCloXP3atH25w';
-var map = new mapboxgl.Map({
+const map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/mapbox/outdoors-v11',
   center: [4.833350965586533, 45.76423780141141],

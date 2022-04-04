@@ -27,10 +27,6 @@ header, main, footer{
   font-family: 'Roboto', sans-serif;
 }
 
-/* .main{
-  margin-top: 80px;
-} */
-
 ::selection{
   background: rgb(32, 56, 33);
   color: white;
@@ -87,6 +83,10 @@ header, main, footer{
 
 .topbar-item:hover{
   color: black;
+}
+
+.topbar-item > a{
+  transition: color 0.5s ease-in-out;
 }
 
 .topbar-active{
